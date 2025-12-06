@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Quarterly Earnings — RevealJS</title>
+
+  <!-- RevealJS CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css">
+
+  <!-- Highlight.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+
+  <style>
+    body { margin: 0; background: #fff; }
+    .reveal { font-family: "Segoe UI", Roboto, Arial, sans-serif; }
+
+    .reveal .slides section {
+      position: relative;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .slide-email {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #222;
+      background: rgba(255,255,255,0.9);
+      padding: 4px 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      z-index: 60;
+      pointer-events: none;
+    }
+
+    pre code {
+      font-size: 0.88rem;
+      display: block;
+      padding: 12px;
+      border-radius: 6px;
+      background: #f7f7f7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1 -->
+      <section>
+        <h1>Quarterly Earnings — Q4</h1>
+        <h3>Interactive Technical Report</h3>
+        <p>Presented by: <strong>Technical Consultant</strong></p>
+
+        <p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+        <aside class="notes">Introduce the purpose of the meeting and the agenda.</aside>
+      </section>
+
+      <!-- Slide 2 (Markdown) -->
+      <section data-markdown>
+        <textarea data-template>
+## Executive Summary (Markdown Slide)
+
+- Revenue up by 12%
+- Costs reduced through automation
+- Customer expansion strong
+
+---
+
+## Focus for Next Quarter
+1. Improve risk modeling
+2. Optimize cloud costs
+3. Expand enterprise accounts
+
+<p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+        </textarea>
+      </section>
+
+      <!-- Slide 3: Fragments -->
+      <section>
+        <h2>Key Highlights</h2>
+
+        <ul>
+          <li class="fragment">Acquired 4 enterprise clients</li>
+          <li class="fragment">Digital payments grew 31%</li>
+          <li class="fragment">Operational efficiency improved</li>
+        </ul>
+
+        <p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+        <aside class="notes">Discuss each point as it appears.</aside>
+      </section>
+
+      <!-- Slide 4: Code -->
+      <section>
+        <h2>Python: Revenue Loading Script</h2>
+
+        <pre><code class="language-python">
+import pandas as pd
+
+df = pd.read_csv("quarterly_earnings.csv")
+df["growth"] = df["revenue"].pct_change()
+print(df.head())
+        </code></pre>
+
+        <p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+        <aside class="notes">Explain how growth is calculated.</aside>
+      </section>
+
+      <!-- Slide 5: Math -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>
+        \[
+          ROI = \frac{Net\ Profit}{Total\ Investment} \times 100
+        \]
+        </p>
+
+        <p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+        <aside class="notes">Explain ROI relevance in quarterly assessment.</aside>
+      </section>
+
+      <!-- Slide 6 -->
+      <section>
+        <h2>Thank You</h2>
+        <p>For queries: <strong>22f2001145@ds.study.iitm.ac.in</strong></p>
+
+        <p class="slide-email">22f2001145@ds.study.iitm.ac.in</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- RevealJS + plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+  <!-- highlight.js runtime -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      controls: true,
+      progress: true,
+      plugins: [RevealMarkdown, RevealHighlight, RevealMath]
+    });
+
+    Reveal.addEventListener('ready', () => {
+      if (window.hljs) hljs.highlightAll();
+    });
+  </script>
+
+</body>
+</html>
